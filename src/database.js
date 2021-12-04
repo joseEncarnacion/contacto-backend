@@ -1,12 +1,11 @@
 const mongoose = require('mongoose')
 
-const URI = process.env.URI_DB
+// He realizado esta condicional para en caso que no logre configurar mi base de dato en su computador pues le cree una local en su equipo 
+// con el schema que configurado 
+const URI = process.env.URI_DB ?  process.env.URI_DB : "mongodb://localhost/mdbtest"
 
 
-// async function main() {
-//     await mongoose.connect(URI, ()=> console.log('database conected sucess'));
-// }
-// main().catch(err => console.log(err));
+
 const conexion =  async() =>{
     try {
         await mongoose.connect(URI, ()=> console.log('database conected success')
@@ -17,5 +16,5 @@ const conexion =  async() =>{
 }
 
 
-// module.exports = main()
+
 module.exports = conexion()
