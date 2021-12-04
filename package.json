@@ -1,0 +1,26 @@
+{
+  "name": "contacto-backend",
+  "version": "1.0.0",
+  "description": "APP crud de contacto ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest --watchAll --verbose"
+  },
+  "author": "Jose Encarnacion",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0",
+    "jest": "^27.4.3",
+    "mongoose": "^6.0.14",
+    "morgan": "^1.10.0",
+    "supertest": "^6.1.6"
+  }
+}
